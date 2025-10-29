@@ -11,11 +11,15 @@
 
 ### 2. Supabase Configuration
 
-The Supabase credentials are already hardcoded:
-- **Project URL**: `https://prdigwmezbxiqjqqqxeg.supabase.co`
-- **Anon Key**: Already configured
+Set the following environment variables (locally in `.env.local`, and in your hosting provider's dashboard):
 
-**Note**: You'll need the service role key for data import. This is required to run the import script.
+```bash
+NEXT_PUBLIC_SUPABASE_URL= # e.g. https://YOUR-PROJECT.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY= # anon public key
+SUPABASE_SERVICE_ROLE_KEY= # service role key (server-side only)
+```
+
+The app and API use the public variables; the import script requires the service role key.
 
 ### 3. Import Data
 

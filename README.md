@@ -22,11 +22,15 @@ A Next.js website that replicates the functionality of instamembers.appspot.com,
 
 ### 1. Supabase Credentials
 
-The Supabase credentials are already hardcoded in the application:
-- **Project URL**: `https://prdigwmezbxiqjqqqxeg.supabase.co`
-- **Anon Key**: Already configured in the code
+Create a `.env.local` file with:
 
-**Note**: You'll need the service role key for data import. Contact the project administrator for this key.
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+```
+
+Use the values from Supabase project Settings > API. The service role key is required for the import script and must never be exposed to the browser.
 
 ### 2. Database Setup
 
